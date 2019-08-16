@@ -1,0 +1,36 @@
+{
+  "entrypoint": "index.html",
+  "shell": "src/polymer-starter-kit.js",
+  "sources": ["res/**/*", "src/**/*"],
+  "extraDependencies": [
+    "node_modules/@webcomponents/webcomponentsjs/*.js",
+    "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js"
+  ],
+  "builds": [
+    {
+      "preset": "es5-bundled",
+      "name": "es5-bundled",
+      "basePath": "/",
+      "js": {
+        "minify": true,
+        "compile": true,
+        "transformModulesToAmd": true
+      },
+      "css": {
+        "minify": true
+      },
+      "html": {
+        "minify": true
+      },
+      "bundle": true,
+      "addServiceWorker": false,
+      "extraDependencies": ["node_modules/@webcomponents/webcomponentsjs/**"]
+    }
+  ],
+  "moduleResolution": "node",
+  "npm": true,
+  "lint": {
+    "rules": ["polymer-3"]
+  }
+}
