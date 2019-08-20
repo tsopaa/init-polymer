@@ -1,7 +1,7 @@
 {
   "entrypoint": "index.html",
-  "shell": "src/polymer-starter-kit.js",
-  "sources": ["res/**/*", "src/**/*"],
+  "shell": "src/my-app.js",
+  "sources": ["src/**.js", "package.json"],
   "extraDependencies": [
     "node_modules/@webcomponents/webcomponentsjs/*.js",
     "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
@@ -9,7 +9,6 @@
   ],
   "builds": [
     {
-      "preset": "es5-bundled",
       "name": "es5-bundled",
       "basePath": "/",
       "js": {
@@ -24,8 +23,7 @@
         "minify": true
       },
       "bundle": true,
-      "addServiceWorker": false,
-      "extraDependencies": ["node_modules/@webcomponents/webcomponentsjs/**"]
+      "addServiceWorker": false
     }
   ],
   "moduleResolution": "node",
